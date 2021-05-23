@@ -1,0 +1,131 @@
+/* Total */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    color: #2F242C !important;
+    font-style: normal;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.7;
+}
+ul {
+    list-style: none;
+}
+/* Header */
+header {
+    padding: 0 8.5%;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    border-bottom: 1px solid #2F242C;
+}
+.logo {
+    width: 40%;
+}
+.logo h2 {
+    font-size: 36px;
+    line-height: 35px;
+}
+.logo span {
+    font-size: 20px;
+    line-height: 0.8em;
+}
+.oursContacts {
+    width: 40%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+footer .oursContacts {
+    align-items: flex-start;
+}
+.oursContacts address {
+    margin-top: 5px;
+}
+.heading {
+    padding: 0 8.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    text-align: center;
+}
+/* Footer */
+footer {
+    padding: 0 8.5%;
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+    align-items: center;
+    background-color: #F8F7F9;
+    align-items: center;
+}
+
+.socialNetworks {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.socialNetworks div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialNetworks svg {
+    margin-top: 10px;
+}
+.socialNetworks h5 {
+    font-size: 18px;
+}
+
+
+/* Media query */
+@media (max-width: 960px) {
+    .decorImg {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .socialNetworks,
+    .logo,
+    .oursContacts{
+        width: 50%;
+    }
+    .heading {
+        flex-direction: column;
+    }
+    .heading h1 {
+        font-size: 30px;
+    }
+    .heading a {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 475px) {
+    header {
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-evenly;
+    }
+    footer {
+        flex-direction: column;
+        height: 210px;
+        justify-content: space-evenly;
+    }
+    .socialNetworks,
+    .logo,
+    .oursContacts{
+        width: 100%;
+        align-items: center !important;
+        text-align: center;
+    }
+}

@@ -1,0 +1,135 @@
+.linkToMain {
+    font-style: italic;
+}
+.linkToMain svg {
+    vertical-align: middle;
+}
+.selectedDate {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    margin-top: 25px;
+}
+.wrapper {
+    margin-top: 40px;
+    padding: 0 8.5%;
+}
+.selectors {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.selectors div {
+    margin-right: 70px;
+}
+.selectors div label {
+    display: block;
+    text-align: left;
+}
+.selectors input,
+.selectors select {
+    padding-left: 5px;
+    font-size: 16px;
+    width: 170px;
+    height: 35px;
+    border: 1px solid #ACA885;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.item {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    column-gap: 35px;
+}
+.imgs {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 10px;
+}
+.imgs img {
+    max-width: 100%;
+    display: block;
+}
+.imgs ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imgs ul img:hover {
+    cursor: pointer;
+}
+.information {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.information h3 {
+    font-size: 36px;
+}
+.information h4 {
+    font-size: 28px;
+}
+.information ul {
+    display: flex;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+.information ul li {
+    margin-right: 15px;
+}
+.information p {
+    font-size: 18px;
+}
+.information a {
+    display: block;
+    width: 190px;
+    height: 60px;
+    background-color: #D5DCF9;
+    text-align: center;
+    font-size: 20px;
+    line-height: 55px;
+}
+
+/* Media */
+@media (max-width: 768px) {
+    .item {
+        grid-template-columns: none;
+        margin-bottom: 80px;
+    }
+    .item a {
+        margin-top: 30px;
+    }
+    .information {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 575px) {
+    .wrapper {
+        padding: 0 5%;
+    }
+    
+    .selectedDate {
+        font-size: 24px;
+    }
+    .selectors {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .selectors div:first-child {
+        margin-bottom: 20px;
+    }
+    .imgs {
+        grid-template-columns: 1fr;
+    }
+    .imgs ul {
+        flex-direction: row;
+        margin: 5px -2.5px 0 -2.5px;
+    }
+    .imgs ul li {
+        margin: 0 2.5px;
+    }
+}

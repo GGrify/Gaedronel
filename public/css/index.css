@@ -1,0 +1,280 @@
+/* Body */
+.firstScreen {
+    background-image: url("../images/mainBG.png");
+    background-size: cover;
+    height: 60vh;
+    padding: 5% 17% 3% 17%;
+    text-align: center;
+    box-shadow: 0 0 4px #2F242C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.firstScreen h1 {
+    font-size: 38px;
+}
+.firstScreen form {
+    height: 105px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+.firstScreen .inputs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inputs div {
+    margin-top: -10px;
+}
+.inputs div label {
+    display: block;
+    text-align: left;
+}
+.firstScreen input,
+.firstScreen select {
+    padding-left: 5px;
+    font-size: 16px;
+    width: 170px;
+    height: 35px;
+    border: 1px solid #ACA885;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+.buttonSearch button {
+    width: 100%;
+    height: 100%;
+    background-color: #D5DCF9;
+    border: none;
+}
+.buttonSearch button:hover {
+    cursor: pointer;
+
+}
+/* Wrapper */
+.wrapper {
+    padding: 0 8.5%;
+    text-align: center;
+}
+.wrapper h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+/* Slider */
+/* стили основного контейнера слайдера */
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* стили для обёртки, в которой заключены слайды */
+  .slider__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* стили для контейнера слайдов */
+  .slider__items {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  /* стили для слайдов */
+  .slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+  }
+  .slider__item img {
+      display: block;
+      max-width: 100%;
+  }
+  .information {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .information h3 {
+      font-size: 36px;
+  }
+  .information h4 {
+      font-size: 28px;
+  }
+  .information ul {
+      display: flex;
+      margin: 30px 0;
+      flex-wrap: wrap;
+  }
+  .information ul li {
+      margin-right: 15px;
+  }
+  .information p {
+      font-size: 18px;
+  }
+  .information a {
+      display: block;
+      width: 190px;
+      height: 60px;
+      background-color: #D5DCF9;
+      text-align: center;
+      font-size: 20px;
+      line-height: 55px;
+  }
+  /* стили для индикаторов */
+  .slider__indicators {
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .slider__indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 50px;
+    height: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #C4C4C4;
+    background-clip: padding-box;
+  }
+
+  .slider__indicators li.active {
+    background-color: #D5DCF9;
+  }
+
+  /* для стилизации текущего слайдера */
+  .img-fluid {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+}
+.serviceItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.serviceItem span {
+    margin-top: 10px;
+}
+.servicesSvg {
+    width: 80px;
+    height: 80px;
+}
+.map {
+    height: 65vh;
+    margin-bottom: 70px;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media */
+@media (max-width: 1220px) {
+    .firstScreen {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    .firstScreen h1 {
+        font-size: 30px;
+    }
+    .firstScreen form {
+        height: 140px;
+        padding: 0 8.5%;
+        background: rgba(255, 255, 255, 0.5);
+        grid-template-columns: 6fr 1fr;
+    }
+    .inputs {
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+    .buttonSearch {
+        padding: 20px 0;
+    }
+
+    .slider {
+        padding: 0 10%;
+    }
+    .slider__item {
+        grid-template-columns: none;
+    }
+    .slider__item img {
+        display: none;
+    }
+    .information a {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper h2 {
+        font-size: 30px;
+        margin: 45px 0 30px 0;
+    }
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30px   ;
+    }
+    .serviceItem {
+        justify-content: unset;
+    }
+    .servicesSvg {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width: 600px) {
+    .firstScreen {
+        height: 520px;
+        padding-bottom: 20px;
+    }
+    .firstScreen form {
+        grid-template-columns: 1fr;
+        height: 460px;
+        width: 90%;
+        margin: 20px auto;
+        padding: 0;
+    }
+    .inputs {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .buttonSearch button {
+        width: 30%;
+    }
+}
+@media (max-width: 475px) {
+    .firstScreen h1 {
+        font-size: 26px;
+    }
+    .wrapper {
+        padding: 0 5%;
+    }
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+}
